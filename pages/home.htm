@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 content">
+        <h5 align="left">Add new task:</h5>
+        <form ng-submit="submit()">
+            <div class="form-group">
+                <input type="text" ng-model="newTask.name" class="form-control" /><br>
+                <p>Details:</p>
+                <textarea type="text" ng-model="newTask.surname" class="form-control"></textarea>
+            </div>
+            <button type="submit" ng-click="addTask()" class="btn btn-lg btn-success button-add" >Add</button>
+        </form>
+    </div>
+</div>
+
+<div ng-repeat="task in taskKeeper track by $index" >
+    <div class="row justify-content-center" ng-hide="task.done">
+        <div class="col-12 col-md-8 content">
+            <div class="card bg-warning mb-3">
+                <div ng-click="showDetails = !showDetails" class="task-title card-header">
+                    <p class="task-header">{{ task.name }}</p>
+                    <button class="btn btn-light btn-sm button-done" ng-click="tasks.splice($index, 1)">Remove</button>
+                    <button class="btn btn-light btn-sm button-done" ng-click="doneTask($index)" >Done</button>     
+                </div>
+                <div ng-show="showDetails" class="card-body">
+                    <p class="card-text">{{ task.surname }}</p>     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Base structure */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+header{
+    margin-bottom: 3%;
+}
+
+p{
+    margin-bottom: 5px;
+}
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+.site-wrapper-inner {
+  vertical-align: top;
+}
+
+/* Header */
+.masthead {
+  background-color: #333;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.masthead-brand a {
+  text-decoration: none;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active{
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+/*body*/
+
+.content{
+    text-align: left;
+}
+
+.button-add{
+    margin-bottom: 2%;
+}
+
+.button-done{
+    float: right;
+    margin-right: 5px;
+}
+
+.task-title{
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-header{
+    display: inline-block;
+}
+
+.card{
+    text-shadow: 0 .02rem .02rem rgba(0, 0, 0, .5);
+    color: #212529;
+}
+
+/* Affix and center */
+@media (min-width: 40em) {   
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 768px) {
+    .task-header{
+        display: block;
+    }
+}

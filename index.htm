@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="taskKeeperApp">
+    <head>
+        <title>Task Keeper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+        <script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.0/angular-resource.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>   
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">          
+                <header>
+                    <nav class="navbar navbar-default masthead">
+                        <div class="container">
+                            <div class="navbar-header col-6 col-md-8" align="left">
+                                <h3 class="masthead-brand"><a href="#/">Task Keeper</a></h3>
+                            </div>             
+                          <nav class="nav nav-masthead col-6 col-md-4 justify-content-end">
+                            <a ng-model="homepage" class="nav-link" href="#/" ng-class="{ 'active': homepage }">Home</a>
+                            <a ng-model="donepage"  class="nav-link" href="#/done" ng-class="{ 'active': donepage }">Done tasks</a>
+                          </nav>
+                        </div>
+                    </nav>
+                </header>
+                <div class="container">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>     
+    </body>
+</html>
